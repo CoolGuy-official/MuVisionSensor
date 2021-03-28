@@ -1,0 +1,45 @@
+{
+    "name": "muvision",
+    "version": "1.2.20",
+    "description": "Specifically designed for the AI education.",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "MuVisionSensor3/mu_vision_sensor_i2c_hw_interface.cpp",
+        "MuVisionSensor3/mu_vision_sensor_i2c_hw_interface.h",
+        "MuVisionSensor3/mu_uart_interface.cpp",
+        "MuVisionSensor3/mu_uart_interface.h",
+        "MuVisionSensor3/mu_vision_sensor_i2c_interface.cpp",
+        "MuVisionSensor3/mu_vision_sensor_i2c_interface.h",
+        "MuVisionSensor3/mu_vision_sensor_uart_interface.cpp",
+        "MuVisionSensor3/mu_vision_sensor_uart_interface.h",
+        "MuVisionSensor3/mu_vision_sensor_interface.h",
+        "MuVisionSensor3/mu_vision_sensor_type.h",
+        "MuVisionSensor3/MuVisionSensor.cpp",
+        "MuVisionSensor3/MuVisionSensor.h",
+        "MuVisionSensor3/MuVisionSensor3_AT.cpp",
+        "MuVisionSensor3/MuVisionSensor3_AT.h",
+        "MuVisionSensor3/MorpxProtocolAnalysis/mu_protocol_analysis.h",
+        "MuVisionSensor3/MorpxProtocolAnalysis/morpx_protocol_analysis.h",
+        "MuVisionSensor3/MorpxProtocolAnalysis/morpx_protocol_analysis.cpp",
+        "MuVisionSensor3/MorpxProtocolAnalysis/morpx_protocol_types.h",
+        "MuVisionSensor3/MorpxProtocolAnalysis/SimpleList.h",
+        "MuVisionSensor3/DebugTool/morpx_debug_tool.h",
+        "shims.d.ts",
+        "enums.d.ts",
+        "muvision.cpp",
+        "muvision.ts",
+        "_locales/zh-cn/muvision-strings.json",
+        "_locales/zh-cn/muvision-jsdoc-strings.json",
+        "_locales/zh-tw/muvision-strings.json",
+        "_locales/zh-tw/muvision-jsdoc-strings.json"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "preferredEditor": "tsprj"
+}
