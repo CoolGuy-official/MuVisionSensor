@@ -6,7 +6,6 @@
  */
 
 #include "MuVisionSensor.h"
-#include "pxt.h"
 
 MuVisionSensor::MuVisionSensor(uint32_t address)
     : address_(address) {
@@ -79,7 +78,7 @@ uint8_t MuVisionSensor::VisionBegin(MuVisionType vision_type) {
   mu_err_t err;
   err = VisionSetStatus(vision_type, true);
   if (err) return err;
-  wait_ms(20);          // FIXME waiting for vision to initialize, may delete in later version
+  sleep_us(20*1000);          // FIXME waiting for vision to initialize, may delete in later version
   err = VisionSetOutputMode(kCallBackMode);
   if (err) return err;
   return MU_OK;

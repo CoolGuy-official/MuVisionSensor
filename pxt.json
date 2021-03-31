@@ -1,6 +1,6 @@
 {
     "name": "muvision",
-    "version": "1.2.20",
+    "version": "1.2.21",
     "description": "Specifically designed for the AI education.",
     "license": "MIT",
     "dependencies": {

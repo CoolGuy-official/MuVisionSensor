@@ -18,14 +18,20 @@
 #define LOG_OUTPUT              2
 #endif
 
+
+#define  MU_PRINTF(s,...)                                      \
+    do {                                                       \
+    } while (0)
+
+
 #if LOG_OUTPUT != 0
-#define IPRINTF(s,...)                  printf("\e[0;32mI:" s "\e[0m", ##__VA_ARGS__)
+#define IPRINTF(s,...)                  MU_PRINTF("\e[0;32mI:" s "\e[0m", ##__VA_ARGS__)
 #else
 #define IPRINTF(s,...)
 #endif
 
 #if WARNING_OUTPUT != 0
-#define WPRINTF(s,...)                  printf("\e[0;33min file:%s, function:%s, line: %d\nW:" s "\e[0m",\
+#define WPRINTF(s,...)                  MU_PRINTF("\e[0;33min file:%s, function:%s, line: %d\nW:" s "\e[0m",\
                                                 __FILE__, \
                                                 __PRETTY_FUNCTION__,\
                                                 __LINE__, \
@@ -35,7 +41,7 @@
 #endif
 
 #if ERROR_OUTPUT != 0
-#define EPRINTF(s,...)                  printf("\e[0;31min file:%s, function:%s, line: %d\nE:" s "\e[0m",\
+#define EPRINTF(s,...)                  MU_PRINTF("\e[0;31min file:%s, function:%s, line: %d\nE:" s "\e[0m",\
                                                 __FILE__,\
                                                 __PRETTY_FUNCTION__,\
                                                 __LINE__,\

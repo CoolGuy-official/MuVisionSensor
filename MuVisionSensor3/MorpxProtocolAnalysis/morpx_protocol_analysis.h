@@ -9,6 +9,7 @@
 #define PRODUCTS_MORPXPROTOCOLANALYSIS_MORPX_PROTOCOL_ANALYSIS_H_
 
 #include "morpx_protocol_types.h"
+#include "../DebugTool/morpx_debug_tool.h"
 
 class PtotocolAnalysis {
  public:
@@ -19,20 +20,20 @@ class PtotocolAnalysis {
   PtotocolAnalysis& operator=(const PtotocolAnalysis &) = delete;
 
   static void portListShow(void) {
-printf("port_list_:0x%x\n",(size_t)&port_list_);
-printf("  ├─size:%u\n",port_list_.size());
+MU_PRINTF("port_list_:0x%x\n",(size_t)&port_list_);
+MU_PRINTF("  ├─size:%u\n",port_list_.size());
     port_node_t* port_node = port_list_.front();
     while (port_node) {
-printf("  └─port_node:0x%x\n", (size_t)port_node);
-printf("  │ ├─port_addr:0x%x\n", port_node->element_.port_addr);
-printf("  │ └─device_list:0x%x\n", (size_t)&port_node->element_.device_list);
-printf("  │   ├─size:%u\n",port_node->element_.device_list.size());
+MU_PRINTF("  └─port_node:0x%x\n", (size_t)port_node);
+MU_PRINTF("  │ ├─port_addr:0x%x\n", port_node->element_.port_addr);
+MU_PRINTF("  │ └─device_list:0x%x\n", (size_t)&port_node->element_.device_list);
+MU_PRINTF("  │   ├─size:%u\n",port_node->element_.device_list.size());
       device_node_t* dev_node = port_node->element_.device_list.front();
       while (dev_node) {
-printf("  │   └─dev_node:0x%x\n", (size_t)dev_node);
-printf("  │   │ ├─port_addr:0x%x\n", dev_node->element_.dev_addr);
-printf("  │   │ └─data_q:0x%x\n", (size_t)&dev_node->element_.data_q);
-printf("  │   │   ├─size:%u\n  │   │   └─", dev_node->element_.data_q.size());
+MU_PRINTF("  │   └─dev_node:0x%x\n", (size_t)dev_node);
+MU_PRINTF("  │   │ ├─port_addr:0x%x\n", dev_node->element_.dev_addr);
+MU_PRINTF("  │   │ └─data_q:0x%x\n", (size_t)&dev_node->element_.data_q);
+MU_PRINTF("  │   │   ├─size:%u\n  │   │   └─", dev_node->element_.data_q.size());
         dev_node->element_.data_q.showMessage();
         dev_node = dev_node->next_;
       }

@@ -23,7 +23,7 @@ size_t MuUart::read(uint8_t* buf, unsigned int length) {
   size_t ret = hw_port_->read(buf, length);
 #if MORPX_DEBUG_ENABLE && LOG_OUTPUT
   for (unsigned int i = 0; i < ret; ++i) {
-    printf("0x%02x,", buf[i]);
+    MU_PRINTF("0x%02x,", buf[i]);
   }
 #endif
   return ret;
@@ -32,7 +32,7 @@ size_t MuUart::read(uint8_t* buf, unsigned int length) {
 size_t MuUart::write(uint8_t* buf, unsigned int length) {
 #if MORPX_DEBUG_ENABLE && LOG_OUTPUT
   for (unsigned int i = 0; i < length; ++i) {
-    printf("%02x,", buf[i]);
+    MU_PRINTF("%02x,", buf[i]);
   }
 #endif
   return hw_port_->send(buf, length);

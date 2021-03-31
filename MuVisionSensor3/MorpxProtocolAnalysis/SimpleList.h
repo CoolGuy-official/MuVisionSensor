@@ -11,9 +11,8 @@
 #ifndef SIMPLE_LIST_H_
 #define SIMPLE_LIST_H_
 
-#include <stdio.h>
 #include <string.h>
-
+#include "../DebugTool/morpx_debug_tool.h"
 /*
  * @brief Node for class SimpleList.
  * @see SimpleList
@@ -279,7 +278,7 @@ class SimpleQueue : public SimpleList<node_t<element_t>> {
     return node_[last_].element_;
   }
   void showMessage() {
-    printf("first_ = %u, last_ = %u, size = %u\n", first_, last_, SimpleList<node_t<element_t>>::size());
+    MU_PRINTF("first_ = %u, last_ = %u, size = %u\n", first_, last_, SimpleList<node_t<element_t>>::size());
   }
   void clear(void) {
     SimpleList<node_t<element_t>>::clear();

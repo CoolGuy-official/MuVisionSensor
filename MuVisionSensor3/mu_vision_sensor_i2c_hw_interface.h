@@ -16,7 +16,7 @@
 #define ARDUINO_LIB_MUVISIONSENSOR_SRC_MU_VISION_SENSOR_I2C_HW_INTERFACE_H_
 
 #include "mu_vision_sensor_i2c_interface.h"
-#include "MicroBit.h"
+#include "pxt.h"
 //@type define I2C type
 typedef MicroBitI2C MuVsI2C;
 

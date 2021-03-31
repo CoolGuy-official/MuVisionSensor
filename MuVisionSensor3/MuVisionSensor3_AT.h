@@ -8,7 +8,6 @@
 #ifndef MUVISIONSENSOR3_AT_H_
 #define MUVISIONSENSOR3_AT_H_
 
-#include <stdio.h>
 #include "pxt.h"
 #include "mu_vision_sensor_type.h"
 
