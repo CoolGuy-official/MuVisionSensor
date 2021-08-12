@@ -4,7 +4,8 @@
     "description": "Specifically designed for the AI education.",
     "license": "MIT",
     "dependencies": {
-        "core": "*"
+        "core": "*",
+        "microphone": "*"
     },
     "files": [
         "README.md",
@@ -33,9 +34,7 @@
         "muvision.cpp",
         "muvision.ts",
         "_locales/zh-cn/muvision-strings.json",
-        "_locales/zh-cn/muvision-jsdoc-strings.json",
-        "_locales/zh-tw/muvision-strings.json",
-        "_locales/zh-tw/muvision-jsdoc-strings.json"
+        "_locales/zh-cn/muvision-jsdoc-strings.json"
     ],
     "testFiles": [
         "test.ts"
