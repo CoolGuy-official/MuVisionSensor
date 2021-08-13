@@ -1,4 +1,4 @@
-//% color="#ff6600" weight=20 icon="\uf085"
+//% color="#ff6600" weight=103 icon="\uf085"
 namespace muvision {
     export enum VisionType {
         //% block="🌈 Color Block"
@@ -272,3 +272,5 @@ namespace muvision {
         return gesture == type;
     }
 }
+//% color="#11ACEF" icon="\uf1eb" weight=102
+namespace muvisionAT {}
